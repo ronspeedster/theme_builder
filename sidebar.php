@@ -63,7 +63,7 @@
 
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
-        <div class="mx-3">Theme Builder</div>
+        <div class="mx-3">protheme global inc</div>
       </a>
 
       <!-- Divider -->
@@ -84,13 +84,17 @@
         Utilities
       </div>
 
-      <!-- Nav Item - Charts -->
-      <li class="nav-item">
-        <a class="nav-link" href="records.php">
-          <i class="fas fa-fw fa-chart-area"></i>
-          <span>Records</span></a>
-      </li>
+        <li class="nav-item">
+            <a class="nav-link" href="item.php">
+                <i class="fas fa-plus-square"></i>
+                <span>Item</span></a>
+        </li>
 
+        <li class="nav-item">
+            <a class="nav-link" href="sculpture-materials.php">
+                <i class="fas fa-utensils"></i>
+                <span>Sculpture Materials</span></a>
+        </li>
       <!-- Nav Item - Tables -->
       <li class="nav-item" style="display: none;">
         <a class="nav-link" href="#">
