@@ -4,7 +4,7 @@ include("sidebar.php");
 $getItems = $mysqli->query('SELECT * FROM item') or die ($mysqli->error);
 
 ?>
-
+<title>Item</title>
 <!-- Content Wrapper -->
 <div id="content-wrapper" class="d-flex flex-column">
 

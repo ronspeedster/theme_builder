@@ -4,8 +4,22 @@ include("sidebar.php");
 $getItems = $mysqli->query('SELECT * FROM item') or die ($mysqli->error);
 $getSculptureMaterials = $mysqli->query('SELECT * FROM sculpture_materials') or die ($mysqli->error);
 
+$getItemSculptureMaterials = $mysqli->query('SELECT i.item_code, i.item_description, ism.item_value, sm.description
+FROM item_sculpture_material ism
+JOIN item i
+ON i.id = ism.item_id
+JOIN sculpture_materials sm
+ON sm.id = ism.sculpture_id') or die ($mysqli->error);
 ?>
-
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#itemSculptureMaterials').DataTable({
+            "order": [[ 2, "asc" ]],
+            "pageLength": 50
+        } );
+    } );
+</script>
+<title>Sculpture Materials</title>
 <!-- Content Wrapper -->
 <div id="content-wrapper" class="d-flex flex-column">
 
@@ -87,26 +101,27 @@ $getSculptureMaterials = $mysqli->query('SELECT * FROM sculpture_materials') or 
 
                     <!-- Project Card Example -->
                     <div class="card shadow mb-12" style="padding: 2%;">
-                        <table class="table" id="dataTable">
+                        <table class="table" id="itemSculptureMaterials">
                             <thead>
                             <tr>
                                 <th>Item Code</th>
                                 <th>Description</th>
-                                <th>Material</th>
-                                <th>Finish</th>
+                                <th>Sculpture Materials</th>
+                                <th>Value</th>
                             </tr>
                             </thead>
                             <tbody>
-                            <?php while($newItems=$getItems->fetch_assoc()){ ?>
+                            <?php while($newItemSculptureMaterials=$getItemSculptureMaterials->fetch_assoc()){ ?>
                                 <tr>
-                                    <td><?php echo $newItems['item_code']; ?></td>
-                                    <td><?php echo $newItems['item_description']; ?></td>
-                                    <td><?php echo $newItems['material']; ?></td>
-                                    <td><?php echo $newItems['finish']; ?></td>
+                                    <td><?php echo $newItemSculptureMaterials['item_code']; ?></td>
+                                    <td><?php echo $newItemSculptureMaterials['item_description']; ?></td>
+                                    <td><?php echo $newItemSculptureMaterials['description']; ?></td>
+                                    <td><?php echo $newItemSculptureMaterials['item_value']; ?></td>
                                 </tr>
                             <?php }?>
                             </tbody>
                         </table>
+                        <a href="sculpture_materials_consolidated.php" target="_blank" style="text-align: center;">Show consilidated information</a>
                     </div>
                 </div>
 

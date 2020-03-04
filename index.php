@@ -2,7 +2,7 @@
   require_once 'dbh.php';
   include("sidebar.php");
 ?>
-
+<title>Dashboard</title>
     <!-- Content Wrapper -->
     <div id="content-wrapper" class="d-flex flex-column">
 
