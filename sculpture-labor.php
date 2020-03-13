@@ -1,15 +1,16 @@
 <?php
 require_once 'dbh.php';
 include("sidebar.php");
-$getItems = $mysqli->query('SELECT * FROM item') or die ($mysqli->error);
-$getSculptureMaterials = $mysqli->query('SELECT * FROM sculpture_materials') or die ($mysqli->error);
+$getItems = $mysqli->query('SELECT i.* FROM item i
+    LEFT JOIN sculpture_labor sl
+    ON sl.item_id = i.id
+    WHERE sl.item_id IS NULL
+    ') or die ($mysqli->error);
 
-$getItemSculptureMaterials = $mysqli->query('SELECT i.item_code, i.item_description, ism.item_value, sm.description, sm.id 
-FROM item_sculpture_material ism
-JOIN item i
-ON i.id = ism.item_id
-JOIN sculpture_materials sm
-ON sm.id = ism.sculpture_id') or die ($mysqli->error);
+$getItemSculptureMaterials = $mysqli->query('SELECT i.item_code, i.item_description, sl.days, sl.id
+FROM item i
+JOIN sculpture_labor sl
+ON sl.item_id = i.id') or die ($mysqli->error);
 ?>
 <script type="text/javascript">
     $(document).ready(function() {
@@ -45,7 +46,7 @@ ON sm.id = ism.sculpture_id') or die ($mysqli->error);
             ?>
             <!-- Page Heading -->
             <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                <h1 class="h3 mb-0 text-gray-800">Sculpture Materials</h1>
+                <h1 class="h3 mb-0 text-gray-800">Sculpture Labor</h1>
             </div>
 
             <!-- Content Row -->
@@ -63,36 +64,27 @@ ON sm.id = ism.sculpture_id') or die ($mysqli->error);
                                     <thead>
                                     <tr>
                                         <th>Item Code</th>
-                                        <th>Sculpture Materials</th>
-                                        <th>Value</th>
+                                        <th>Labor value in hours</th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                     <tr>
                                         <td>
                                             <select class="form-control" name="item_code" required>
-                                                <option value="">---</option>
+                                                <option value="" disabled selected>---</option>
                                                 <?php while ($newItems = $getItems->fetch_assoc()){ ?>
                                                     <option value="<?php echo $newItems['id'];?>"><?php echo $newItems['item_code']; ?></option>
                                                 <?php } ?>
                                             </select>
                                         </td>
                                         <td>
-                                            <select class="form-control" name="sculpture_material" required>
-                                                <option value="">---</option>
-                                                <?php while ($newSculptureMaterials = $getSculptureMaterials->fetch_assoc()){ ?>
-                                                    <option value="<?php echo $newSculptureMaterials['id'];?>"><?php echo $newSculptureMaterials['description']; ?></option>
-                                                <?php } ?>
-                                            </select>
-                                        </td>
-                                        <td>
-                                            <input type="number" name="item_value" class="form-control" step="0.00001"  required>
+                                            <input type="number" placeholder="1.0001" name="item_labor" class="form-control" step="0.00001"  required>
                                         </td>
                                     </tr>
                                     </tbody>
 
                                 </table>
-                                <button type="submit" class="btn btn-primary btn-sm mb-1 float-right" name="save_sculpture_materials"><i class="far fa-save"></i> Save</button>
+                                <button type="submit" class="btn btn-primary btn-sm mb-1 float-right" name="save_sculpture_labor"><i class="far fa-save"></i> Save</button>
                         </form>
                     </div>
                 </div>
@@ -106,8 +98,7 @@ ON sm.id = ism.sculpture_id') or die ($mysqli->error);
                             <tr>
                                 <th>Item Code</th>
                                 <th>Description</th>
-                                <th>Sculpture Materials</th>
-                                <th>Value</th>
+                                <th>Labor in Hours</th>
                                 <th>Actions</th>
                             </tr>
                             </thead>
@@ -116,8 +107,7 @@ ON sm.id = ism.sculpture_id') or die ($mysqli->error);
                                 <tr>
                                     <td><?php echo $newItemSculptureMaterials['item_code']; ?></td>
                                     <td><?php echo $newItemSculptureMaterials['item_description']; ?></td>
-                                    <td><?php echo $newItemSculptureMaterials['description']; ?></td>
-                                    <td><?php echo $newItemSculptureMaterials['item_value']; ?></td>
+                                    <td><?php echo $newItemSculptureMaterials['days']; ?></td>
                                     <td>
                                         <!-- Button trigger modal -->
                                         <button type="button" class="btn btn-sm btn-danger float-left" data-toggle="modal" data-target="#exampleModal<?php echo $newItemSculptureMaterials['id']; ?>">
@@ -129,14 +119,14 @@ ON sm.id = ism.sculpture_id') or die ($mysqli->error);
                                             <div class="modal-dialog" role="document">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
-                                                        <h5 class="modal-title" id="exampleModalLabel">Delete <?php echo $newItemSculptureMaterials['description'].' in '.$newItemSculptureMaterials['item_code'];  ?>'s record? You cannot undo the changes</h5>
+                                                        <h5 class="modal-title" id="exampleModalLabel">Delete <?php echo $newItemSculptureMaterials['item_code'];  ?>'s record? You cannot undo the changes</h5>
                                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                             <span aria-hidden="true">&times;</span>
                                                         </button>
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Close</button>
-                                                        <a href="process_item.php?deleteSculptureMaterials=<?php echo $newItemSculptureMaterials['id']; ?>" class="btn btn-sm btn-danger">Confirm</a>
+                                                        <a href="process_item.php?deleteSculptureLabor=<?php echo $newItemSculptureMaterials['id']; ?>" class="btn btn-sm btn-danger">Confirm</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -147,7 +137,7 @@ ON sm.id = ism.sculpture_id') or die ($mysqli->error);
                             <?php }?>
                             </tbody>
                         </table>
-                        <a href="sculpture_materials_consolidated.php" target="_blank" style="text-align: center;">Show consilidated information</a>
+
                     </div>
                 </div>
 

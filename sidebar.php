@@ -20,6 +20,7 @@
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="css/sb-admin-2.css" rel="stylesheet">
     <link rel="icon" href="img/logo-theme-builder.png" type="image/gif" sizes="16x16">
 
     <!-- Custom styles for this page -->
@@ -96,11 +97,38 @@
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Customize BOM:</h6>
                     <a class="collapse-item" href="item.php"><i class="fas fa-plus-square"></i> Add Item</a>
-                    <a class="collapse-item" href="sculpture-materials.php"><i class="fas fa-utensils"></i> Sculpture Materials</a>
                 </div>
             </div>
         </li>
 
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#castingMaterials" aria-expanded="true" aria-controls="castingMaterials">
+                <i class="fas fa-toolbox"></i>
+                <span>Sculpture Materials</span>
+            </a>
+            <div id="castingMaterials" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <h6 class="collapse-header">Customize Materials:</h6>
+                    <a class="collapse-item" href="sculpture-materials.php"><i class="fas fa-utensils"></i> Add Sculpture Materials to Items</a>
+                    <a class="collapse-item" href="add-sculpture-materials.php"><i class="fas fa-edit"></i> Add / Edit Sculpture Materials</a>
+                    <a class="collapse-item" href="sculpture-labor.php"><i class="far fa-clock"></i> Sculpture Labor</a>
+                </div>
+            </div>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#sculptureMaterials" aria-expanded="true" aria-controls="equipments">
+                <i class="fas fa-toolbox"></i>
+                <span>Casting Materials</span>
+            </a>
+            <div id="sculptureMaterials" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <h6 class="collapse-header">Customize Materials:</h6>
+                    <a class="collapse-item" href="casting-materials.php"><i class="fas fa-utensils"></i> Sculpture Materials</a>
+                    <a class="collapse-item" href="casting-labor.php"><i class="far fa-clock"></i> Sculpture Labor</a>
+                </div>
+            </div>
+        </li>
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
 

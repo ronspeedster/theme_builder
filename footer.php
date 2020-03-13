@@ -2,7 +2,7 @@
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Theme Builder 2020</span>
+            <span>Copyright &copy; PROTHEME GLOBAL INC 2020</span>
           </div>
         </div>
       </footer>
@@ -32,7 +32,7 @@
         <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
         <div class="modal-footer">
           <button class="btn btn-secondary btn-sm" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary btn-sm" href="index.php">Logout</a>
+          <a class="btn btn-primary btn-sm" href="logout.php">Logout</a>
         </div>
       </div>
     </div>
