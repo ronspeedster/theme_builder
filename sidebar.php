@@ -124,8 +124,9 @@
             <div id="sculptureMaterials" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Customize Materials:</h6>
-                    <a class="collapse-item" href="casting-materials.php"><i class="fas fa-utensils"></i> Sculpture Materials</a>
-                    <a class="collapse-item" href="casting-labor.php"><i class="far fa-clock"></i> Sculpture Labor</a>
+                    <a class="collapse-item" href="casting-materials.php"><i class="fas fa-utensils"></i> Add Casting Materials to Items</a>
+                    <a class="collapse-item" href="add-casting-materials.php"><i class="fas fa-edit"></i> Add / Edit Casting Materials</a>
+                    <a class="collapse-item" href="casting-labor.php"><i class="far fa-clock"></i> Casting Labor</a>
                 </div>
             </div>
         </li>

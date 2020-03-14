@@ -2,36 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e11efbc-edd2-48a8-bb15-cc8ebd1564d8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/add-sculpture-materials.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logout.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/process_materials.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sculpture-labor.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/add-casting-materials.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casting-labor.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casting-materials.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/404.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blank.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/buttons.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cards.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/charts.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forgot-password.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/print_record.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/process_item.php" beforeDir="false" afterPath="$PROJECT_DIR$/process_item.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/process_violation.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/register.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sculpture-materials.php" beforeDir="false" afterPath="$PROJECT_DIR$/sculpture-materials.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sculpture_materials_consolidated.php" beforeDir="false" afterPath="$PROJECT_DIR$/sculpture_materials_consolidated.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/process_materials.php" beforeDir="false" afterPath="$PROJECT_DIR$/process_materials.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/sidebar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tables.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/topbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/topbar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities-animation.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities-border.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities-color.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities-other.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,6 +115,7 @@
       <workItem from="1584006416214" duration="11000" />
       <workItem from="1584006443965" duration="10000" />
       <workItem from="1584057796493" duration="12889000" />
+      <workItem from="1584158127319" duration="6733000" />
     </task>
     <servers />
   </component>
@@ -174,11 +152,19 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="462" y="124" key="FileChooserDialogImpl/0.0.1366.738/-1360.4.1360.768@0.0.1366.738" timestamp="1583988832693" />
-    <state x="384" y="193" key="com.intellij.ide.util.TipDialog" timestamp="1584057810150">
+    <state x="384" y="193" key="com.intellij.ide.util.TipDialog" timestamp="1584158127079">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="384" y="193" key="com.intellij.ide.util.TipDialog/0.0.1366.738/-1360.4.1360.768@0.0.1366.738" timestamp="1584057810150" />
+    <state x="384" y="193" key="com.intellij.ide.util.TipDialog/0.0.1366.738/-1360.4.1360.768@0.0.1366.738" timestamp="1584158127079" />
     <state x="384" y="193" key="com.intellij.ide.util.TipDialog/0.0.1366.738@0.0.1366.738" timestamp="1584006443937" />
+    <state x="342" y="8" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1584158981460">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="342" y="8" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.738/-1360.4.1360.768@0.0.1366.738" timestamp="1584158981460" />
+    <state x="339" y="165" key="run.anything.popup" timestamp="1584159631740">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="339" y="165" key="run.anything.popup/0.0.1366.738/-1360.4.1360.768@0.0.1366.738" timestamp="1584159631740" />
     <state x="339" y="22" width="670" height="676" key="search.everywhere.popup" timestamp="1584083439704">
       <screen x="0" y="0" width="1366" height="738" />
     </state>

@@ -13,6 +13,8 @@
         header("location: item.php");
     }
 
+    #Sculpture
+
     if(isset($_POST['save_sculpture_materials'])){
         $item_code = $_POST['item_code'];
         $sculpture_material = $_POST['sculpture_material'];
@@ -49,12 +51,13 @@
     if(isset($_GET['deleteSculptureMaterials'])){
         $id = $_GET['deleteSculptureMaterials'];
 
-        $mysqli->query(" DELETE FROM sculpture_materials WHERE id= '$id'  ") or die ($mysqli->error());
+        $mysqli->query(" DELETE FROM sculpture_materials WHERE id= '$id'  ") or die ($mysqli->error);
 
         $_SESSION['message'] = "Record has been deleted!";
         $_SESSION['msg_type'] = "success";
         header("location: sculpture-materials.php");
     }
+
     if(isset($_GET['deleteSculptureLabor'])){
         $id = $_GET['deleteSculptureLabor'];
 
@@ -63,4 +66,38 @@
         $_SESSION['message'] = "Record has been deleted!";
         $_SESSION['msg_type'] = "success";
         header("location: sculpture-labor.php");
+    }
+
+    #Casting
+    if(isset($_POST['save_casting_materials'])){
+        $item_code = $_POST['item_code'];
+        $sculpture_material = $_POST['casting_material'];
+        $item_value = $_POST['item_value'];
+
+        $mysqli->query("INSERT INTO item_casting_material (item_id, sculpture_id, item_value) VALUES('$item_code','$sculpture_material','$item_value' )") or die ($mysqli->error());
+
+        $_SESSION['message'] = "Record has been saved!";
+        $_SESSION['msg_type'] = "success";
+        header("location: casting-materials.php");
+    }
+
+    if(isset($_POST['save_casting_labor'])){
+        $item_code = $_POST['item_code'];
+        $item_labor = $_POST['item_labor'];
+
+        $mysqli->query("INSERT INTO casting_labor (item_id, days) VALUES('$item_code','$item_labor' )") or die ($mysqli->error);
+
+        $_SESSION['message'] = "Record has been saved!";
+        $_SESSION['msg_type'] = "success";
+        header("location: casting-labor.php");
+    }
+
+    if(isset($_GET['deleteCastingLabor'])){
+        $id = $_GET['deleteCastingLabor'];
+
+        $mysqli->query(" DELETE FROM casting_labor WHERE id= '$id'  ") or die ($mysqli->error());
+
+        $_SESSION['message'] = "Record has been deleted!";
+        $_SESSION['msg_type'] = "success";
+        header("location: casting-labor.php");
     }
