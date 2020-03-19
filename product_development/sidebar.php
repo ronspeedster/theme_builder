@@ -12,13 +12,13 @@
         //header("Location: index.php");
     }
     else if($_SESSION['account'] == 'sales_marketing'){
-        header("Location: sales_marketing");
+        header("Location: ../sales_marketing");
     }
     else if($_SESSION['account'] == 'production_manager'){
-        header("Location: production_manager");
+        header("Location: ../production_manager");
     }
     else if($_SESSION['account'] == 'product_development'){
-        header("Location: product_development");
+        //header("Location: ../product_development");
     }
     else {
         // Do nothing
@@ -35,21 +35,21 @@
     <meta name="author" content="">
 
     <!-- Custom fonts for this template-->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="css/sb-admin-2.min.css" rel="stylesheet">
-    <link href="css/sb-admin-2.css" rel="stylesheet">
-    <link rel="icon" href="img/logo-theme-builder.png" type="image/gif" sizes="16x16">
+    <link href="../css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="../css/sb-admin-2.css" rel="stylesheet">
+    <link rel="icon" href="../img/logo-theme-builder.png" type="image/gif" sizes="16x16">
 
     <!-- Custom styles for this page -->
-    <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <link href="../vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
     <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
 
   <style type="text/css">
   ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -104,10 +104,10 @@
       </li>
 
       <!-- Divider -->
-      <hr class="sidebar-divider">
+      <hr class="sidebar-divider" style="display:none;">
 
       <!-- Heading -->
-      <div class="sidebar-heading">
+      <div class="sidebar-heading" style="display:none;">
         Utilities
       </div>
         <!-- Nav Items - Equipments -->
@@ -155,7 +155,7 @@
         </li>
 
         <!-- Production Plan -->
-        <li class="nav-item">
+        <li class="nav-item" style="display:none;">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#productionPlan" aria-expanded="true" aria-controls="equipments">
                 <i class="far fa-clock"></i>
                 <span>Production Plan</span>
@@ -169,7 +169,7 @@
         </li>
 
         <!-- Utilization  -->
-        <li class="nav-item">
+        <li class="nav-item" style="display:none;">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#utilizationModule" aria-expanded="true" aria-controls="equipments">
                 <i class="fas fa-retweet"></i>
                 <span>Utilization Module</span>
@@ -183,7 +183,7 @@
         </li>
 
         <!-- Accounts  -->
-        <li class="nav-item">
+        <li class="nav-item" style="display:none;">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#accountsModule" aria-expanded="true" aria-controls="equipments">
                 <i class="fas fa-user-circle"></i>
                 <span>Accounts</span>
