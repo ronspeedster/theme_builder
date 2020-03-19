@@ -133,7 +133,7 @@
                           </tbody>
 
                       </table>
-                    <button type="submit" class="btn btn-primary btn-sm mb-1 float-right" name="save_project"><i class="far fa-save"></i> Save</button>
+                    <button type="submit" class="btn btn-primary btn-sm mb-1 float-right" name="save_project"><i class="far fa-save" style="display: none;"></i> Save</button>
                   </form>
                 </div>
               </div>
