@@ -191,7 +191,7 @@
             <div id="accountsModule" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Customize Projects:</h6>
-                    <a class="collapse-item" href="utilization_module.php"><i class="fas fa-user-circle"></i> View Projects</a>
+                    <a class="collapse-item" href="accounts.php"><i class="fas fa-user-circle"></i> View Accounts</a>
                 </div>
             </div>
         </li>
