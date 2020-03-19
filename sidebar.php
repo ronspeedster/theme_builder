@@ -130,6 +130,21 @@
                 </div>
             </div>
         </li>
+
+        <!-- Production Plan -->
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#productionPlan" aria-expanded="true" aria-controls="equipments">
+                <i class="far fa-clock"></i>
+                <span>Production Plan</span>
+            </a>
+            <div id="productionPlan" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <h6 class="collapse-header">Customize Materials:</h6>
+                    <a class="collapse-item" href="production_plans.php"><i class="fas fa-eye"></i> View Projects</a>
+                </div>
+            </div>
+        </li>
+
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
 

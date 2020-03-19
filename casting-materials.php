@@ -147,7 +147,7 @@ ON cm.id = icm.sculpture_id') or die ($mysqli->error);
                             <?php }?>
                             </tbody>
                         </table>
-                        <a href="sculpture_materials_consolidated.php" target="_blank" style="text-align: center;">Show consilidated information</a>
+                        <a href="casting_materials_consolidated.php" target="_blank" style="text-align: center;">Show consilidated information</a>
                     </div>
                 </div>
 

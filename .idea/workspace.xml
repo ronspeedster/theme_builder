@@ -2,12 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e11efbc-edd2-48a8-bb15-cc8ebd1564d8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/add-casting-materials.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/casting-labor.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/casting-materials.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casting_materials_consolidated.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/print_project.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/process_projects.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production_plans.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/process_item.php" beforeDir="false" afterPath="$PROJECT_DIR$/process_item.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/process_materials.php" beforeDir="false" afterPath="$PROJECT_DIR$/process_materials.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/casting-materials.php" beforeDir="false" afterPath="$PROJECT_DIR$/casting-materials.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sculpture_materials_consolidated.php" beforeDir="false" afterPath="$PROJECT_DIR$/sculpture_materials_consolidated.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/sidebar.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,6 +67,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -116,6 +120,10 @@
       <workItem from="1584006443965" duration="10000" />
       <workItem from="1584057796493" duration="12889000" />
       <workItem from="1584158127319" duration="6733000" />
+      <workItem from="1584344459176" duration="646000" />
+      <workItem from="1584534540930" duration="5294000" />
+      <workItem from="1584581930967" duration="10403000" />
+      <workItem from="1584598247215" duration="9038000" />
     </task>
     <servers />
   </component>
@@ -148,26 +156,33 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="413" y="116" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.738/-1360.4.1360.768@0.0.1366.738" timestamp="1584057911557" />
-    <state x="462" y="124" key="FileChooserDialogImpl" timestamp="1583988832693">
+    <state x="462" y="124" key="FileChooserDialogImpl" timestamp="1584591791941">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="462" y="124" key="FileChooserDialogImpl/0.0.1366.738/-1360.4.1360.768@0.0.1366.738" timestamp="1583988832693" />
-    <state x="384" y="193" key="com.intellij.ide.util.TipDialog" timestamp="1584158127079">
-      <screen x="0" y="0" width="1366" height="738" />
+    <state x="462" y="124" key="FileChooserDialogImpl/0.0.1366.738/-1920.7.1920.1080@0.0.1366.738" timestamp="1584591791941" />
+    <state x="540" y="274" key="com.intellij.ide.util.TipDialog" timestamp="1584598247743">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
+    <state x="540" y="274" key="com.intellij.ide.util.TipDialog/-1366.313.1366.738/0.0.1920.1050@0.0.1920.1050" timestamp="1584598247743" />
     <state x="384" y="193" key="com.intellij.ide.util.TipDialog/0.0.1366.738/-1360.4.1360.768@0.0.1366.738" timestamp="1584158127079" />
+    <state x="-1380" y="289" key="com.intellij.ide.util.TipDialog/0.0.1366.738/-1920.7.1920.1080@-1920.7.1920.1080" timestamp="1584581930625" />
+    <state x="384" y="193" key="com.intellij.ide.util.TipDialog/0.0.1366.738/-1920.7.1920.1080@0.0.1366.738" timestamp="1584534543338" />
     <state x="384" y="193" key="com.intellij.ide.util.TipDialog/0.0.1366.738@0.0.1366.738" timestamp="1584006443937" />
     <state x="342" y="8" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1584158981460">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="342" y="8" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.738/-1360.4.1360.768@0.0.1366.738" timestamp="1584158981460" />
-    <state x="339" y="165" key="run.anything.popup" timestamp="1584159631740">
+    <state x="339" y="165" key="run.anything.popup" timestamp="1584591918666">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="339" y="165" key="run.anything.popup/0.0.1366.738/-1360.4.1360.768@0.0.1366.738" timestamp="1584159631740" />
-    <state x="339" y="22" width="670" height="676" key="search.everywhere.popup" timestamp="1584083439704">
-      <screen x="0" y="0" width="1366" height="738" />
+    <state x="339" y="165" key="run.anything.popup/0.0.1366.738/-1920.7.1920.1080@0.0.1366.738" timestamp="1584591918666" />
+    <state x="476" y="31" width="945" height="962" key="search.everywhere.popup" timestamp="1584606078755">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
+    <state x="476" y="31" width="945" height="962" key="search.everywhere.popup/-1366.313.1366.738/0.0.1920.1050@0.0.1920.1050" timestamp="1584606078755" />
     <state x="339" y="22" width="670" height="676" key="search.everywhere.popup/0.0.1366.738/-1360.4.1360.768@0.0.1366.738" timestamp="1584083439704" />
+    <state x="339" y="22" width="672" height="676" key="search.everywhere.popup/0.0.1366.738/-1920.7.1920.1080@0.0.1366.738" timestamp="1584593019247" />
   </component>
 </project>

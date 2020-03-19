@@ -9,11 +9,24 @@ MAX(CASE WHEN (sm.id = 4) THEN ism.item_value ELSE NULL END ) AS sm4,
 MAX(CASE WHEN (sm.id = 5) THEN ism.item_value ELSE NULL END ) AS sm5,
 MAX(CASE WHEN (sm.id = 6) THEN ism.item_value ELSE NULL END ) AS sm6,
 MAX(CASE WHEN (sm.id = 7) THEN ism.item_value ELSE NULL END ) AS sm7,
-MAX(CASE WHEN (sm.id = 8) THEN ism.item_value ELSE NULL END ) AS sm8
-FROM item_sculpture_material ism
+MAX(CASE WHEN (sm.id = 8) THEN ism.item_value ELSE NULL END ) AS sm8,
+MAX(CASE WHEN (sm.id = 9) THEN ism.item_value ELSE NULL END ) AS sm9,
+MAX(CASE WHEN (sm.id = 10) THEN ism.item_value ELSE NULL END ) AS sm10,
+MAX(CASE WHEN (sm.id = 11) THEN ism.item_value ELSE NULL END ) AS sm11,
+MAX(CASE WHEN (sm.id = 12) THEN ism.item_value ELSE NULL END ) AS sm12,
+MAX(CASE WHEN (sm.id = 13) THEN ism.item_value ELSE NULL END ) AS sm13,
+MAX(CASE WHEN (sm.id = 14) THEN ism.item_value ELSE NULL END ) AS sm14,
+MAX(CASE WHEN (sm.id = 15) THEN ism.item_value ELSE NULL END ) AS sm15,
+MAX(CASE WHEN (sm.id = 16) THEN ism.item_value ELSE NULL END ) AS sm16,
+MAX(CASE WHEN (sm.id = 17) THEN ism.item_value ELSE NULL END ) AS sm17,
+MAX(CASE WHEN (sm.id = 18) THEN ism.item_value ELSE NULL END ) AS sm18,
+MAX(CASE WHEN (sm.id = 19) THEN ism.item_value ELSE NULL END ) AS sm19,
+MAX(CASE WHEN (sm.id = 20) THEN ism.item_value ELSE NULL END ) AS sm20,
+MAX(CASE WHEN (sm.id = 21) THEN ism.item_value ELSE NULL END ) AS sm21
+FROM item_casting_material ism
 JOIN item i
 ON i.id = ism.item_id
-JOIN sculpture_materials sm
+JOIN casting_materials sm
 ON sm.id = ism.sculpture_id
 GROUP BY i.id') or die ($mysqli->error);
 
@@ -64,7 +77,7 @@ GROUP BY i.id') or die ($mysqli->error);
                 <div class="col-lg-12 mb-4">
 
                     <!-- Project Card Example -->
-                    <div class="card shadow mb-4" style="padding: 2%; overflow-x: auto;">
+                    <div class="card shadow mb-4" style="padding: 2%; overflow-x: auto; ">
                         <table class="table" id="itemSculptureMaterials">
                             <thead>
                             <tr>
@@ -73,14 +86,26 @@ GROUP BY i.id') or die ($mysqli->error);
                                 <th>Item Description</th>
                                 <th>Material</th>
                                 <th>Finish</th>
-                                <th>Styrofoam 1' x 4' x 8'</th>
-                                <th>Micro Wax</th>
-                                <th>Parafin Wax</th>
-                                <th>Petroleum Jelly</th>
-                                <th>Silicone Sealant Clear</th>
-                                <th>Boral Plaster</th>
-                                <th>PVC Pipe 4" X 10ft Orange</th>
-                                <th>Orinary Plywood 1/4" (6mm)</th>
+                                <th>1st Coating-FR441</th>
+                                <th>Putty Mix-Reg004</th>
+                                <th>1st Coating</th>
+                                <th>2nd Coating</th>
+                                <th>Fibermat-300</th>
+                                <th>Resin 206 (004PL)</th>
+                                <th>Rolling Mix-411</th>
+                                <th>Rolling Mix</th>
+                                <th>Hardener-Ordinary</th>
+                                <th>Lacquer Thinner</th>
+                                <th>Styrene</th>
+                                <th>Toner</th>
+                                <th>Laminated Block</th>
+                                <th>Back Coat-004</th>
+                                <th>Liquid Release Wax</th>
+                                <th>Flexible Resin 31-832</th>
+                                <th>Resin Mix w/ Sand</th>
+                                <th>Fibermat-300</th>
+                                <th>Clear Resin 32-037</th>
+                                <th>Hardner-Butanox</th>
 
                             </tr>
                             </thead>
@@ -125,6 +150,19 @@ GROUP BY i.id') or die ($mysqli->error);
                                     <td><?php echo $newItemSculMat['sm7']; ?></td>
                                     <td><?php echo $newItemSculMat['sm8']; ?></td>
                                     <td><?php echo $newItemSculMat['sm8']; ?></td>
+                                    <td><?php echo $newItemSculMat['sm9']; ?></td>
+                                    <td><?php echo $newItemSculMat['sm10']; ?></td>
+                                    <td><?php echo $newItemSculMat['sm11']; ?></td>
+                                    <td><?php echo $newItemSculMat['sm12']; ?></td>
+                                    <td><?php echo $newItemSculMat['sm13']; ?></td>
+                                    <td><?php echo $newItemSculMat['sm14']; ?></td>
+                                    <td><?php echo $newItemSculMat['sm15']; ?></td>
+                                    <td><?php echo $newItemSculMat['sm16']; ?></td>
+                                    <td><?php echo $newItemSculMat['sm17']; ?></td>
+                                    <td><?php echo $newItemSculMat['sm18']; ?></td>
+                                    <td><?php echo $newItemSculMat['sm19']; ?></td>
+                                    <td><?php echo $newItemSculMat['sm20']; ?></td>
+                                    <td><?php echo $newItemSculMat['sm21']; ?></td>
 
                                 </tr>
                             <?php }?>
