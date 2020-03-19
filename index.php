@@ -166,8 +166,8 @@
                             ?>
                             <tr>
                                 <td><?php echo $newProject['project_title']; ?></td>
-                                <td><?php echo $newProject['order_target']; ?></td>
-                                <td><?php echo $newProject['order_date']; ?></td>
+                                <td style="width: 100px;"><?php echo date('Y-m-d', strtotime($newProject['order_target'])); ?></td>
+                                <td style="width: 100px;"><?php echo date('Y-m-d', strtotime($newProject['order_date'])); ?></td>
                                 <td><?php echo $newProject['remarks']; ?></td>
                                 <td><?php echo $qty; ?></td>
                                 <td><?php echo $unit_flanges; ?></td>

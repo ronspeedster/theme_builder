@@ -172,7 +172,7 @@ $getDate = $newProject['order_date'];
 
                             <!-- Casting -->
                             <tr>
-                                <td>1</td>
+                                <td>2</td>
                                 <td>Casting</td>
                                 <td>
                                     <select class="form-control" onchange="location = this.value;" style="width: 100px; font-size: small;">
